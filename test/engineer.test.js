@@ -17,20 +17,20 @@ describe('Engineer', () => {
 
     it('engineer id', () => {
         const id = '67890';
-        const engineer = new Engineer(id);
+        const engineer = new Engineer('John', id);
         expect(engineer.id).toBe('67890');
     });
 
     it('engineer email', () => {
         const email = 'john@email.com';
-        const engineer = new Engineer(email);
+        const engineer = new Engineer('John', '67890', email);
         expect(engineer.email).toBe('john@email.com');
     });
 
     it('engineer github username', () => {
         const github = 'johndoe';
-        const engineer = new Engineer(github);
-        expect(engineer.email).toBe('johndoe');
+        const engineer = new Engineer('John', '67890','john@email.com', github);
+        expect(engineer.github).toBe('johndoe');
     });
 
     it('testing getRole()', () => {

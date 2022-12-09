@@ -16,13 +16,13 @@ describe('Employee', () => {
 
     it('employee id', () => {
         const id = '67890';
-        const employee = new Employee(id);
+        const employee = new Employee('John', id);
         expect(employee.id).toBe('67890');
     });
 
     it('employee email', () => {
         const email = 'john@email.com';
-        const employee = new Employee(email);
+        const employee = new Employee('John', '67890', email);
         expect(employee.email).toBe('john@email.com');
     });
 

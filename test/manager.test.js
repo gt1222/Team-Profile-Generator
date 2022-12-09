@@ -17,20 +17,20 @@ describe('Manager', () => {
 
     it('manager id', () => {
         const id = '67890';
-        const manager = new Manager(id);
+        const manager = new Manager('John', id);
         expect(manager.id).toBe('67890');
     });
 
     it('manager email', () => {
         const email = 'john@email.com';
-        const manager = new Manager(email);
+        const manager = new Manager('John', '67890', email);
         expect(manager.email).toBe('john@email.com');
     });
 
     it('manager office number', () => {
         const officeNumber = '626';
-        const manager = new Manager(officeNumber);
-        expect(manager.email).toBe('626');
+        const manager = new Manager('John', '67890','john@email.com', officeNumber);
+        expect(manager.officeNumber).toBe('626');
     });
 
     it('testing getRole()', () => {

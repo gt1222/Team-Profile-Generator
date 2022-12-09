@@ -17,20 +17,20 @@ describe('Intern', () => {
 
     it('intern id', () => {
         const id = '67890';
-        const intern = new Intern(id);
+        const intern = new Intern('John', id);
         expect(intern.id).toBe('67890');
     });
 
     it('intern email', () => {
         const email = 'john@email.com';
-        const intern = new Intern(email);
+        const intern = new Intern('John', '67890', email);
         expect(intern.email).toBe('john@email.com');
     });
 
     it('intern school', () => {
         const school = 'SDSU';
-        const intern = new Intern(school);
-        expect(intern.email).toBe('SDSU');
+        const intern = new Intern('John', '67890','john@email.com', school);
+        expect(intern.school).toBe('SDSU');
     });
 
     it('testing getRole()', () => {

@@ -33,7 +33,7 @@ describe('Manager', () => {
         expect(manager.email).toBe('626');
     });
 
-    it('testing getManager()', () => {
+    it('testing getRole()', () => {
         const manager = new Manager('jane', '12345', 'jane@email.com', '626');
         expect(manager.getRole()).toBe('Manager');
     });

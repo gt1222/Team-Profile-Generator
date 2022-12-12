@@ -1,9 +1,14 @@
 # Team-Profile-Generator
 
 ## Description
-The hardest part about this project was trying to render my project. My data keeps showing up as undefined and it took me awhile to figure out why. I realized in the index.js I accidentally added teamArray into generateTeam () as a parameter, which caused the team value to be undefined in the template.js. After, I had to figure out where in my template literal I messed up so the data can render onto the page.
+The hardest part about this project was trying to render my project. My data keeps showing up as undefined and it took me awhile to figure out why. I realized in the index.js I accidentally added teamArray into generateTeam () as a parameter, which caused the team value to be undefined in the template.js. After, I had to figure out where in my template.js I messed up because my data would not render, until I saw that I forgot to push my data. After that it finally went through. However, it took hours for me to figure out where I messed up and kept changing my codes to see where it would be.
+
+It's working now and I'm proud I got it done.
 
 ## Installation
+1. Clone the repository
+2. Application uses Jest and Inquirer
+3. Run `npm install`
 
 ## Usage
 

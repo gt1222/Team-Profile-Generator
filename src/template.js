@@ -1,7 +1,7 @@
 // template helper codes to generate html so using template literals
 // create the team
 const generateTeam = team => {
-console.log(team)
+// console.log(team)
 
     // create Manager card
     const generateManager = manager => {
@@ -9,7 +9,7 @@ console.log(team)
         <div class="card my-5 mx-2 h-100 w-35 shadow bg-body rounded">
         <div class="card-header bg-primary text-white">
           <h2>${manager.getName()}</h2>
-          <h3> <i class="fa-solid fa-mug-hot"></i>${manager.getRole()}</h3>
+          <h3> <i class="fa-solid fa-mug-hot"></i> ${manager.getRole()}</h3>
         </div>
         <div class="card-body bg-light">
             <ul class="list-group list-group-flush mx-2 my-4">
@@ -28,7 +28,7 @@ console.log(team)
         <div class="card my-5 mx-2 h-100 w-35 shadow bg-body rounded">
         <div class="card-header bg-primary text-white">
           <h2>${engineer.getName()}</h2>
-          <h3> <i class="fa-solid fa-glasses"></i>${engineer.getRole()}</h3>
+          <h3> <i class="fa-solid fa-glasses"></i> ${engineer.getRole()}</h3>
         </div>
         <div class="card-body bg-light">
             <ul class="list-group list-group-flush mx-2 my-4">
@@ -47,7 +47,7 @@ console.log(team)
         <div class="card my-5 mx-2 h-100 w-35 shadow bg-body rounded">
         <div class="card-header bg-primary text-white">
           <h2>${intern.getName()}</h2>
-          <h3><i class="fa-solid fa-user-graduate"></i>${intern.getRole()}</h3>
+          <h3><i class="fa-solid fa-user-graduate"></i> ${intern.getRole()}</h3>
         </div>
         <div class="card-body bg-light">
             <ul class="list-group list-group-flush mx-2 my-4">
@@ -68,32 +68,19 @@ console.log(team)
 
         switch(role) {
             case 'Manager':
-                generateManager(employee);
+                const manager = generateManager(employee);
+                html.push(manager);
                 break;
             case 'Engineer':
-                generateEngineer(employee);
+                const engineer = generateEngineer(employee);
+                html.push(engineer);
                 break;
             case 'Intern':
-                generateIntern(employee);
+                const intern = generateIntern(employee);
+                html.push(intern);
                 break;
         }
     }
-
-    // html.push(team
-    //     .filter(employee => employee.getRole() === "Manager")
-    //     .map(manager => generateManager(manager))
-    // );
-    // html.push(team
-    //     .filter(employee => employee.getRole() === "Engineer")
-    //     .map(engineer => generateEngineer(engineer))
-    //     .join("")
-    // );
-    // html.push(team
-    //     .filter(employee => employee.getRole() === "Intern")
-    //     .map(intern => generateIntern(intern))
-    //     .join("")
-    // );
-
     return html.join("");
 
 }

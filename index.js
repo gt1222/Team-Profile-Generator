@@ -33,7 +33,7 @@ const addManager = () => {
   ]).then(res => {
     const manager = new Manager(res.addManager, res.managerId, res.addEmail, res.addOffice);
     teamArray.push(manager);
-    console.log(manager)
+    // console.log(manager)
     addTeam();
   }
   );
